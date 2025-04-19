@@ -14,4 +14,12 @@ export class UsersService {
     this.users.push(newUser);
     // console.log(this.users);
   }
+
+  findByUserName(username: string): UserDto | undefined {
+    return this.users.find((user) => user.username === username);
+  }
+
+  // findByUserName(username: string): UserDto | null {
+  //   return this.users.find((user) => user.username === username) || null;
+  // }
 }
